@@ -68,7 +68,7 @@ class Schedule(models.Model):
         choices=weekdays,
     )
     start = models.TimeField() # stores time in 24 hr
-    # handle am, om in template display
+    # handle am, pm in template display
     end = models.TimeField()
     start_am_pm = models.CharField(
         max_length=2,
