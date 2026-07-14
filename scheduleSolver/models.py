@@ -44,7 +44,13 @@ class Application(models.Model):
     # Preferred times (in the order of most to least)
 
     def __str__(self):
-        return self.name
+        return (f"name: {self.name},"
+                f"last_name: {self.last_name} "
+                f"preferences:{self.preferences} "
+                f"year: {self.year} "
+                f"sports: {self.sports} "
+                f"phone: {self.phone} "
+                f"email: {self.email} ")
 
 
 class Schedule(models.Model):
@@ -78,4 +84,4 @@ class Schedule(models.Model):
         max_length=2,
         choices=am_pm,
     )
-    reason = models.TextField()
+    reason = models.TextField() # this needs to have a lot of characters for explanation

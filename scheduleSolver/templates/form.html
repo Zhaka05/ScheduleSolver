@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <form action=" url index " method="post" class="p-4">
+        {% csrf_token %}
+
+        <!--Name:-->
+        <div class="mb-3">
+            <label for="name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+
+        <!--Last Name-->
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name">
+        </div>
+
+        <!--Sports Optional-->
+        <div class="mb-3">
+            <label for="sports" class="form-label">Sports</label>
+            <input type="text" class="form-control" id="sports" aria-describedby="sport">
+            <div class="form-text" id="sport">Optional</div>
+        </div>
+
+        <!--        Phone -->
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone #</label>
+            <input type="tel" class="form-control" id="phone">
+        </div>
+
+        <!--Email -->
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+
+        <!-- Checkbox example -->
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+
+        <!--        here are the fields-->
+        Name: <input required type="text" name="name" id=""><br>
+        Last Name: <input required type="text" name="last_name" id=""><br>
+        Sports: <input type="text" name="sports" id=""><br>
+        Phone: <input type="number" name="phone" id=""><br>
+        Email: <input type="email" name="email" id=""><br>
+
+        <!--start of years -->
+        Year:
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="year" id="radioDefault1" value="FN">
+          <label class="form-check-label" for="radioDefault1">
+            Freshmen
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="year" value="SE", id="radioDefault2">
+          <label class="form-check-label" for="radioDefault2">
+            Sophomore
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="year" value="JR" id="radioDefault2">
+          <label class="form-check-label" for="radioDefault2">
+            Junior
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="year" id="radioDefault2" value="SR">
+          <label class="form-check-label" for="radioDefault2">
+            Senior
+          </label>
+        </div>
+        <!--end of years-->
+
+        <!--        Should be checkboxes - preferences -->
+        Preferred (WE, EM, LN): <input type="text" name="preferred" id=""><br>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+          <label class="form-check-label" for="checkDefault">
+            Weekend Shifts
+          </label>
+        </div>
+        <!--        End of preferences  -->
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkChecked">
+          <label class="form-check-label" for="checkChecked">
+            Early Morning Shifts
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="checkChecked">
+          <label class="form-check-label" for="checkChecked">
+            Late Night Shifts
+          </label>
+        </div>
+
+        <!--  Weekday choices - also maybe checkboxes  -->
+        Weekday (preference (MON, TUE, etc.): <input type="text" name="weekday" id=""><br>
+
+        
+        <button type="submit">Submit</button><br>
+    </form>
+</body>
+</html>
